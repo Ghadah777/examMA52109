@@ -1,0 +1,91 @@
+###
+## MA52109: Programming for Data Science
+## Practical - 01/12/2025 - University of Bath
+## Duration: 3 hours, 3 pm to 6 pm
+##
+## This practical consists of a series of tasks (described below).
+##
+## The highest mark obtainable for each task is indicated in square 
+## brackets, [X]. Marks are allocated following clear, correct, and 
+## effective coding. See the separate PDF document on Moodle, 
+## "marking_criteria.pdf", for marking criteria. A maximum of 100 
+## marks can be obtained if all tasks are completed successfully.
+##
+## The current directory was cloned by your fork of 
+## jfoadi/examMA52109.
+## It includes: 
+##  - a Python package, "cluster_maker", 
+##  - "data", "demo", and "tests" directories, 
+##  - a "README.md" file for users of the package,
+##  - a file called "pyproject.toml" to create a local running
+##    environment to execute code including cluster_maker, 
+##  - and this "INSTRUCTIONS" file
+## you are currently reading.
+##
+## Carry out the tasks described below. Task 1 must be carried out first,
+## followed by Task 2. The other three tasks can follow Task 2 in any order.
+###
+##
+## Tasks:
+##
+## 1) Modify one or more files in cluster_maker to run successfully the
+## only test file available in tests. DO NOT modify the test file itself.
+## [30]
+##
+## 2) The script `cluster_plot.py` in folder `demo/` runs without crashing
+## with the following command line:
+##      python demo/cluster_plot.py data/demo_data.csv
+## The script, though, does not do what it was designed to do. For this task
+## you must:
+##  a. Read and run the demo script.
+##  b. Work out what the script is currently doing, and what it was 
+##     intended to do.
+##  c. Identify and correct the mistake in the script so that it behaves 
+##     as intended. Re-run it to check that it now works correctly.
+##  d. Create a file called `EXPLANATION.md` in the project root. In this file:
+##      - briefly explain what was wrong with the original script and how you 
+##        fixed it;
+##      - summarise what the corrected demo script now does;
+##      - give a short overview of what the `cluster_maker` package does, 
+##        describing the purpose of its main components (e.g. preprocessing, 
+##        algorithms, plotting, interface).
+## [20] 
+##
+## 3) Create a new test file in folder `tests`, called `test_preprocessing.py`.
+## In this file, write exactly three unit tests that verify important and meaningful
+## aspects of the module preprocessing.py. Your tests must:
+##  - be your own design,
+##  - include a brief comment above each test explaining what real problem or bug in
+##    preprocessing your test is intended to detect,
+##  - check behaviours that genuinely matter for the correctness or reliability of the
+##    clustering pipeline.
+##
+## The focus of this task is not on writing long code, but on showing clear 
+## understanding of what the preprocessing module is supposed to do, what could go 
+## wrong in real usage, and how a well-designed test can detect those issues.
+##
+## Avoid tests with superficial checks, or without thoughtful explanatory comments.
+## [15]
+##
+## 4) Create a Python script called `simulated_clustering.py`, inside the directory
+## `demo/`, that uses only the clustering tools provided in the cluster_maker package 
+## to analyse the dataset `simulated_data.csv`, inside the directory `data/`, and
+## determine a plausible separation of the data into clusters.
+##
+## The script’s main purpose is to be convincing: your analysis should make it clear 
+## why your chosen clustering is appropriate. Include meaningful plots that reveal the
+## structure of the data, using both the plotting functions in cluster_maker and any
+## supporting visualisations you choose to create with matplotlib.
+## [15]
+##
+## 5) Create a new module for the package cluster_maker, called `agglomerative.py`,
+## that uses the agglomerative algorithm from scikit-learn, 
+## sklearn.cluster.AgglomerativeClustering, to perform robust hierarchical clustering.
+## The new module must integrate well with the rest of the package, following the same
+## design principles and coding style. Once the new module is ready, write a script,
+## called `demo_agglomerative.py`, inside the directory `demo/`, that proves the
+## effectiveness of the new module on the dataset `difficult_dataset.csv`, available
+## inside the directory `data/`. Your implementation should be robust, clearly 
+## structured, and produce sensible clustering.
+## [20]
+###

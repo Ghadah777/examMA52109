@@ -1,0 +1,79 @@
+# ------------------------------------------------------------
+# Python cache and compiled files (always happening)
+# ------------------------------------------------------------
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Byte-compiled or optimised files
+*.so
+*.dll
+
+# ------------------------------------------------------------
+# Virtual environments (you never know if one is placed here)
+# ------------------------------------------------------------
+venv/
+env/
+.venv/
+.python-version
+
+# ------------------------------------------------------------
+# Package build and metadata directories
+# ------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+*.egg
+
+# For editable installs (like this one!)
+cluster_maker.egg-info/
+*.egg-info/
+
+# pip-wheel-metadata
+pip-wheel-metadata/
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+# ------------------------------------------------------------
+# IDE/editor files (you never know what people use)
+# ------------------------------------------------------------
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# Jupyter autosave
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# OS-generated files
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------------------------------------
+# Demo output
+# !!!WARNING!!! Students, consider this when committing code
+# Remove this section if you do not want to ignore demo output
+# ------------------------------------------------------------
+demo_output/
+*.png
+*.txt
+
+# ------------------------------------------------------------
+# Tests temporary files
+# ------------------------------------------------------------
+tests_temp_*.csv
