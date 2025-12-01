@@ -32,6 +32,9 @@ from .algorithms import (
     update_centroids,
 )
 
+# --- NEW MODULE (Task 5) ---
+from .agglomerative import agglomerative_cluster
+
 # --- Evaluation ---
 from .evaluation import (
     compute_inertia,
@@ -44,7 +47,6 @@ from .plotting_clustered import plot_clusters_2d, plot_elbow
 
 # --- High-level interface ---
 from .interface import run_clustering
-
 
 __all__ = [
     # Data generation
@@ -69,6 +71,9 @@ __all__ = [
     "init_centroids",
     "assign_clusters",
     "update_centroids",
+
+    # NEW (Task 5)
+    "agglomerative_cluster",
 
     # Evaluation
     "compute_inertia",
