@@ -2,12 +2,7 @@
 ## cluster_maker: demo for cluster analysis
 ## James Foadi - University of Bath
 ## November 2025
-##
-## This script produces clustering for a group of points in 2D,
-## using k-means for k = 2, 3, 4, 5. The input file is the csv
-## file 'demo_data.csv' in folder 'data/'.
 ###
-
 from __future__ import annotations
 
 import os
@@ -59,11 +54,11 @@ def main(args: List[str]) -> None:
             input_path=input_path,
             feature_cols=feature_cols,
             algorithm="kmeans",
-            k = min(k, 3),
+            k=k,                     # ← FIXED
             standardise=True,
             output_path=os.path.join(OUTPUT_DIR, f"{base}_clustered_k{k}.csv"),
             random_state=42,
-            compute_elbow=False,  # no elbow diagram
+            compute_elbow=False,
         )
 
         # Save cluster plot
@@ -84,17 +79,6 @@ def main(args: List[str]) -> None:
     metrics_df = pd.DataFrame(metrics_summary)
     metrics_csv = os.path.join(OUTPUT_DIR, f"{base}_metrics.csv")
     metrics_df.to_csv(metrics_csv, index=False)
-
-    # Plot some statistics (no elbow: avoid inertia vs k)
-    if "silhouette_score" in metrics_df.columns:
-        plt.figure()
-        plt.bar(metrics_df["k"], metrics_df["silhouette_score"])
-        plt.xlabel("k")
-        plt.ylabel("Silhouette score")
-        plt.title("Silhouette score for different k")
-        stats_path = os.path.join(OUTPUT_DIR, f"{base}_silhouette.png")
-        plt.savefig(stats_path, dpi=150)
-        plt.close()
 
     print("\nDemo completed.")
     print(f"Outputs saved in: {OUTPUT_DIR}")
